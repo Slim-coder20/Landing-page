@@ -225,53 +225,58 @@ nav .navigation a.active::after {
 /* Section Voiture */
 
 .cars-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.cars-container .box-car {
-  text-align: center;
-  padding: 20px;
-  background: var(--bg);
-  position: relative;
-  transition: 0.2s ease-in-out;
-}
-
-.cars-container .box-car::after,
-.cars-container .box-car::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  z-index: -1;
-  background: var(--acent);
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-}
-.cars-container .box-car::after {
-  bottom: -0.2rem;
-  right: -0.2rem;
-}
-.cars-container .box-car::before {
-  top: -0.2rem;
-  left: -0.2rem;
-}
-
-.cars-container .box-car:hover {
-  background: #e2e2e2;
-}
-
-.cars-container .box-car:hover.bx {
-  color: var(--acent);
-}
-
-.cars-container .box-car:hover::after,
-.cars-container .box-car:hover::before {
-  width: 100%;
-  height: 100%;
-}
-
-.cars-container .box-car .bx {
-  font-size: 3rem;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .cars-container .box-car {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg);
+    position: relative;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .cars-container .box-car::after,
+  .cars-container .box-car::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    background: var(--acent);
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background 0.2s ease-in-out;
+  }
+  
+  .cars-container .box-car::after {
+    bottom: -0.2rem;
+    right: -0.2rem;
+  }
+  
+  .cars-container .box-car::before {
+    top: -0.2rem;
+    left: -0.2rem;
+  }
+  
+  .cars-container .box-car:hover {
+    background: #e2e2e2;
+  }
+  
+  .cars-container .box-car:hover .bx {
+    color: var(--acent);
+  }
+  
+  .cars-container .box-car:hover::after,
+  .cars-container .box-car:hover::before {
+    width: 100%;
+    height: 100%;
+    background: var(--acent2); /* Cette règle fonctionnera maintenant */
+  }
+  
+  .cars-container .box-car .bx {
+    font-size: 3rem;
+  }
+  
