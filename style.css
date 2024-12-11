@@ -401,3 +401,29 @@ nav .navigation a.active::after {
 .box-rev h5 {
   font-size: 1.2rem;
 }
+/* ############################# */
+/* Section NewsLetter */
+
+.newsletter {
+  background: linear-gradient(to top right, var(--acent2), var(--acent));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.newsletter h2 {
+  color: var(--bg);
+  font-size: 1.4rem;
+}
+
+.news-box {
+  margin-top: 1rem;
+  background: var(--bg);
+  border-radius: 7px;
+  padding: 4px 8px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.news-box input {
+  padding: 0.1rem;
+}
