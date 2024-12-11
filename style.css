@@ -121,3 +121,5 @@ nav .navigation a.active::after {
 .inscription:hover{
     background: var(--acent2); 
 }
+
+/* ####################### Navigation  */
