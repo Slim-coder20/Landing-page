@@ -318,3 +318,19 @@ nav .navigation a.active::after {
   margin: 1rem 0 1rem;
   color:var(--bg);
 }
+
+.box h4{
+  font-weight: 500;
+}
+
+.box h5{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--acent);
+  margin:0.3rem 0 0.5rem;
+}
+
+.box h5 span{
+  font-size: 0.8rem;
+  font-weight: 500;
+}
