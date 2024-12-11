@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-/*  Global reset */
+/*  Global */
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,6 @@
   scroll-behavior: smooth;
 }
 
-/* utilisation des variables  */
 :root {
   --acent: rgb(244, 92, 54);
   --acent2: rgb(189, 56, 22);
@@ -41,8 +40,22 @@ section {
   border-radius: 7px;
 }
 
-.btn:hover{
-    background: var(--acent2);
+.btn:hover {
+  background: var(--acent2);
+}
+
+.section-heading {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.section-heading span {
+  font-weight: 500;
+  color: var(--acent);
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 4vw, 50px);
 }
 
 /* ####################### Navigation  */
@@ -135,7 +148,7 @@ nav .navigation a.active::after {
   background: var(--acent2);
 }
 
-/* ####################### Navigation  */
+/* ####################### Section Home  */
 
 .home {
   width: 100%;
@@ -206,4 +219,59 @@ nav .navigation a.active::after {
 }
 .home-form .btn:hover {
   background: var(--acent2);
+}
+
+/* ############################# */
+/* Section Voiture */
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.cars-container .box-car {
+  text-align: center;
+  padding: 20px;
+  background: var(--bg);
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.cars-container .box-car::after,
+.cars-container .box-car::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  background: var(--acent);
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+.cars-container .box-car::after {
+  bottom: -0.2rem;
+  right: -0.2rem;
+}
+.cars-container .box-car::before {
+  top: -0.2rem;
+  left: -0.2rem;
+}
+
+.cars-container .box-car:hover {
+  background: #e2e2e2;
+}
+
+.cars-container .box-car:hover.bx {
+  color: var(--acent);
+}
+
+.cars-container .box-car:hover::after,
+.cars-container .box-car:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.cars-container .box-car .bx {
+  font-size: 3rem;
 }
