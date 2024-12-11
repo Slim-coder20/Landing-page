@@ -1,1 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/*  Global reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+/* utilisation des variables  */
+:root {
+  --acent: rgb(244, 92, 54);
+  --acent2: rgb(189, 56, 22);
+  --bg: #fff;
+  --text: #060606;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 50px 100px;
+}
+
+/* ####################### Navigation  */
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: var(--bg);
+}
+
+nav .active {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo img {
+  width: 40px;
+}
+
+nav .navigation {
+  display: flex;
+}
+
+nav .navigation li {
+  position: relative; /* Ajoutez position: relative ici */
+}
+
+nav .navigation a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text);
+  font-weight: 500;
+  position: relative; /* Ajoutez position: relative ici aussi pour que ::before et ::after fonctionnent */
+  display: inline-block;
+}
+
+nav .navigation a::after,
+nav .navigation a::before {
+  content: "";
+  width: 0; /* Initialisez la largeur à 0 pour l'animation */
+  height: 2px;
+  background: var(--acent);
+  position: absolute;
+  transition: width 0.2s ease-in-out;
+}
+
+nav .navigation a::after {
+  bottom: -4px; /* Positionnez en bas */
+  left: 0;
+}
+
+nav .navigation a::before {
+  top: -4px; /* Positionnez en haut */
+  left: 0;
+}
+
+nav .navigation a:hover::after,
+nav .navigation a:hover::before,
+nav .navigation a.active::before,
+nav .navigation a.active::after {
+  width: 100%; /* Étendez la largeur à 100% au survol */
+}
+
+#burger-menu {
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+#burger-menu:hover {
+  color: var(--acent);
+}
+
+.inscription {
+  font-weight: 500;
+  padding: 10px 20px;
+  color: var(--bg);
+  background: var(--acent);
+  border-radius: 7px;
+  transition: 2s ease-in-out; 
+}
+.inscription:hover{
+    background: var(--acent2); 
+}
