@@ -355,6 +355,49 @@ nav .navigation a.active::after {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
-.about-content p{
+.about-content p {
   margin: 1rem 0;
+}
+/* ############################# */
+/* Section AVIS CLIENTS */
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 1rem;
+}
+
+.box-rev {
+  text-align: center;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid var(--acent);
+  padding: 1rem;
+}
+
+.box-rev:hover {
+  background: #e2e2e2;
+}
+
+.rev-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.rev-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stars {
+  margin-bottom: 1rem;
+}
+
+.stars .bx {
+  color: orange;
+}
+.box-rev h5 {
+  font-size: 1.2rem;
 }
